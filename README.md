@@ -23,7 +23,7 @@
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | domain\_names | Domain names for this certificate - the first is the main domain and others are subject alternative names | `any` | n/a | yes |
-| hosted\_zone\_id | Route53 hosted zone to create validation records. Must be set when validation\_method is DNS | `string` | `""` | no |
+| hosted\_zone\_id | Route53 hosted zone to create validation records. For use when validation\_method is DNS. Leave it blank to validate manually. | `string` | `""` | no |
 | validation\_method | DNS, EMAIL or NONE | `string` | `"DNS"` | no |
 
 ## Outputs
@@ -31,6 +31,7 @@
 | Name | Description |
 |------|-------------|
 | arn | n/a |
+| dns\_validation\_records | n/a |
 | id | n/a |
 
 <!--- END_TF_DOCS --->
