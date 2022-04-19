@@ -11,3 +11,9 @@ variable "hosted_zone_id" {
   description = "Route53 hosted zone to create validation records. For use when validation_method is DNS. Leave it blank to validate manually."
   default     = ""
 }
+
+variable "create_validation_record" {
+  description = "Flag to whether create or not the Route 53 validation record"
+  type        = bool
+  default     = true
+}

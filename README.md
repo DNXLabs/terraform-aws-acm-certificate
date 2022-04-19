@@ -3,6 +3,19 @@
 [![Lint Status](https://github.com/DNXLabs/terraform-aws-acm-certificate/workflows/Lint/badge.svg)](https://github.com/DNXLabs/terraform-aws-acm-certificate/actions)
 [![LICENSE](https://img.shields.io/github/license/DNXLabs/terraform-aws-acm-certificate)](https://github.com/DNXLabs/terraform-aws-acm-certificate/blob/master/LICENSE)
 
+
+## Usage
+
+```hcl
+module "acm_certificate" {
+  source = "git::https://github.com/DNXLabs/terraform-aws-acm-certificate?ref=0.2.2"
+
+  domain_names             = ["example.com", "*.example.com"]
+  validation_method        = "DNS"
+  create_validation_record = false
+}
+```
+
 <!--- BEGIN_TF_DOCS --->
 
 ## Requirements

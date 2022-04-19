@@ -5,7 +5,7 @@ resource "aws_route53_record" "validation" {
       record = dvo.resource_record_value
       type   = dvo.resource_record_type
     }
-    if var.validation_method == "DNS"
+    if var.validation_method == "DNS" && var.create_validation_record
   }
 
   allow_overwrite = true
